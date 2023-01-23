@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ChatActivity"
+    android:orientation="vertical"
+    android:background="@color/close_to_black_gray">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        app:cardBackgroundColor="@color/close_to_black_gray"
+        app:cardElevation="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/name_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/back_icon"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/receiver_profilepic"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/user_icon"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@id/back_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/profile_bgs_thin"
+                android:padding="@dimen/_1sdp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_weight="20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/receiver_profilepic">
+
+                <TextView
+                    android:id="@+id/receiver_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/andika_new_basic"
+                    android:text="Sample username"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_6sdp"
+                        android:layout_height="@dimen/_6sdp"
+                        app:cardCornerRadius="@dimen/_400sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_3sdp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/status_symbol"
+                            android:layout_width="@dimen/_6sdp"
+                            android:layout_height="@dimen/_6sdp"
+                            android:background="@color/gray"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/online_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:fontFamily="@font/andika_new_basic_bold"
+                        android:text="0"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/_9ssp" />
+                    <TextView
+                        android:id="@+id/online_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:fontFamily="@font/andika_new_basic_bold"
+                        android:text="Online"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/_9ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--            todo-->
+            <ImageView
+                android:id="@+id/menu_btn"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/menu_icon"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginBottom="@dimen/_18sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tools_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/back_from_toolbar"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:src="@drawable/back_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                />
+
+            <TextView
+                android:id="@+id/selected_chats_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total 5 chats selected"
+                app:layout_constraintStart_toEndOf="@id/back_from_toolbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/white"
+                android:fontFamily="@font/andika_new_basic"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_3sdp"/>
+
+            <ImageView
+                android:id="@+id/unselect_all_btn"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:src="@drawable/uncheck_all_icon"
+                app:layout_constraintEnd_toStartOf="@id/select_all_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"/>
+
+            <ImageView
+                android:id="@+id/select_all_btn"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:src="@drawable/check_all_icon"
+                app:layout_constraintEnd_toStartOf="@id/delete_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"/>
+
+            <ImageView
+                android:id="@+id/delete_btn"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:src="@drawable/delete_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chats_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/type_message_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="6"
+            android:background="@drawable/rounded_corner_lllight_gray"
+            android:fontFamily="@font/andika_new_basic_bold"
+            android:hint="Enter your message"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/dddark_gray"
+            android:paddingEnd="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:textSize="@dimen/_14ssp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/send_message_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/send_message_icon" />
+
+    </LinearLayout>
+
+</LinearLayout>

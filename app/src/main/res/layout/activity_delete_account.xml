@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DeleteAccountActivity"
+    android:background="@color/close_to_black_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_20ssp"
+            android:text="Delete account "
+            android:textColor="@color/white"
+            android:fontFamily="@font/andika_new_basic_bold"
+            android:layout_marginBottom="@dimen/_2sdp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginEnd="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:fontFamily="@font/andika_new_basic_bold"
+        android:text="Enter current password"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/_13ssp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:background="@drawable/white_rounded_black_border">
+
+        <EditText
+            android:id="@+id/old_pass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:textSize="@dimen/_14ssp"
+            android:background="@null"
+            android:fontFamily="@font/andika_new_basic_bold"
+            android:hint="Enter password"
+            android:textColor="@color/ddddark_gray"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_10sdp" />
+
+        <ImageView
+            android:id="@+id/show_old_pass_eye"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:src="@drawable/show_password_icon" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/delete_account_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Account"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/andika_new_basic_bold"
+        android:textAllCaps="false"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingTop="@dimen/_7sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:textColor="@color/red"
+        android:text="Note : This is a permenant action and cannot be undone"
+        android:fontFamily="@font/andika_new_basic"/>
+
+</LinearLayout>

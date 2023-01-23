@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "709745708724",
+    "project_id": "bakbak-3923d",
+    "storage_bucket": "bakbak-3923d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709745708724:android:eb12561e825a023ab851e1",
+        "android_client_info": {
+          "package_name": "com.myapps.bakbak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709745708724-hnp26nd87ab6cr33re1s925j2tmtv6ot.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myapps.bakbak",
+            "certificate_hash": "d262b98bd290f1200ffd2571ee47a9412d23dc29"
+          }
+        },
+        {
+          "client_id": "709745708724-vnpf2a60votano31smb4e432j30t5bko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0ulrmLfscj-pKM5ZJrq8todL820s3Em4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709745708724-vnpf2a60votano31smb4e432j30t5bko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

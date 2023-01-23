@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/close_to_black_gray">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_scrollEffect="compress">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="23dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/back_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/andika_new_basic_bold"
+                android:text="Your group"
+                android:paddingTop="@dimen/_3sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_17ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior = "@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/close_to_black_gray"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_weight="13"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/close_to_black_gray"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/close_to_black_gray">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profil_pic"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_7sdp"
+                        android:background="@drawable/profile_bgs"
+                        android:padding="@dimen/_4sdp"
+                        android:src="@drawable/user_icon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="@dimen/_7sdp">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:padding="5dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/edit_icon_48x48" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/andika_new_basic_bold"
+                                android:text="Group name"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13ssp"
+                                android:paddingBottom="@dimen/_3sdp"/>
+
+                            <EditText
+                                android:id="@+id/enter_new_username"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/andika_new_basic"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:background="@drawable/solid_black_black_border"
+                                android:paddingBottom="@dimen/_3sdp"
+                                android:hint="Enter new username"
+                                android:textColorHint="@color/gray"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="@dimen/_40sdp"
+                                android:visibility="gone"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/green_tick_icon" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="@dimen/_7sdp">
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:padding="5dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/edit_icon_48x48"
+                                android:layout_gravity="top"/>
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/andika_new_basic"
+                                android:text="This is a sample group description, later when you can change it"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13ssp"
+                                android:paddingBottom="@dimen/_3sdp"/>
+
+                            <EditText
+                                android:id="@+id/enter_group_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/andika_new_basic"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:background="@drawable/solid_black_black_border"
+                                android:paddingBottom="@dimen/_3sdp"
+                                android:hint="Enter new username"
+                                android:textColorHint="@color/gray"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="@dimen/_40sdp"
+                                android:visibility="gone"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/green_tick_icon" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:text="Mute all notifications"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/andika_new_basic_bold"/>
+
+                <Switch
+                    android:id="@+id/clearMes"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="Member list :-"
+                android:textColor="@color/white"
+                android:fontFamily="@font/andika_new_basic_bold"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_2sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_450sdp"
+                tools:listitem="@layout/one_group_member_layout"/>
+
+            <Button
+                android:id="@+id/exit_group_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exit Group"
+                android:textColor="@color/red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/andika_new_basic_bold"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                android:paddingTop="@dimen/_7sdp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

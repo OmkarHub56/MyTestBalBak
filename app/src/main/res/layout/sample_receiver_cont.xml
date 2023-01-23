@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_3sdp">
+
+    <LinearLayout
+        android:id="@+id/message_box_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:background="@drawable/receiver_bg_cont"
+        android:layout_marginStart="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/rec_m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:maxWidth="@dimen/_200sdp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/andika_new_basic"
+            android:paddingBottom="@dimen/_6sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:text="Test text"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/rec_m_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:maxWidth="@dimen/_200sdp"
+            android:textColor="@color/llight_gray"
+            android:fontFamily="@font/andika_new_basic"
+            android:text="14:50"
+            android:textSize="@dimen/_8ssp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SentFragment"
+    android:background="@color/close_to_black_gray"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/make_new_fr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Make new friends here"
+        android:textColor="@color/ddark_gray"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/andika_new_basic"
+        android:gravity="center" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_user_rview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:listitem="@layout/one_user_layout_req"/>
+
+
+</LinearLayout>

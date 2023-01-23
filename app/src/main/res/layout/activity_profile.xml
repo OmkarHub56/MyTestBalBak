@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/close_to_black_gray"
+    android:orientation="vertical"
+    android:weightSum="30"
+    tools:context=".Activities.ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="23dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/andika_new_basic_bold"
+            android:text="Your profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_weight="13"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@color/close_to_black_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cons">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/close_to_black_gray">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profil_pic"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/profile_bgs"
+                android:padding="@dimen/_4sdp"
+                android:onClick="updateProfilePic"
+                android:src="@drawable/user_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Click to change"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                android:fontFamily="@font/andika_new_basic"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/_7sdp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit_icon_48x48" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika_new_basic_bold"
+                        android:text="OmkarSapkal"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"
+                        android:paddingBottom="@dimen/_3sdp"/>
+
+                    <EditText
+                        android:id="@+id/enter_new_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika_new_basic"
+                        android:textColor="@color/ddddark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        android:background="@drawable/white_rounded_black_border"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:hint="Enter new username"
+                        android:textColorHint="@color/ddddark_gray"
+                        android:backgroundTint="@color/white"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="@dimen/_40sdp"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/green_tick_icon" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_6sdp"
+                        android:layout_height="@dimen/_6sdp"
+                        app:cardCornerRadius="@dimen/_400sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_5sdp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/status_symbol"
+                            android:layout_width="@dimen/_6sdp"
+                            android:layout_height="@dimen/_6sdp"
+                            android:background="@color/white"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/friend_count_shower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika_new_basic"
+                        android:text="You have a total of 50 friends"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"/>
+
+                    <LinearLayout
+                        android:id="@+id/add_new_friends_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/send_req_bg"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:paddingTop="@dimen/_2sdp">
+
+                        <ImageView
+                            android:id="@+id/addm_symbol"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/plus_symbol_black"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginStart="@dimen/_3sdp" />
+
+                        <TextView
+                            android:id="@+id/add_member_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:fontFamily="@font/andika_new_basic_bold"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:paddingBottom="@dimen/_3sdp"
+                            android:text="Add friends"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_9ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginEnd="@dimen/_10sdp" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/logoutbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/andika_new_basic_bold"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:paddingTop="@dimen/_7sdp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CreateGroupActivity"
+    android:background="@color/close_to_black_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="20">
+
+        <ImageButton
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create new group"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/andika_new_basic_bold"
+            android:textSize="@dimen/_18ssp"
+            android:paddingBottom="@dimen/_5sdp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name your group :"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/andika_new_basic"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+    <EditText
+        android:id="@+id/enter_group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_rounded_black_border"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/andika_new_basic"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:hint="Name your group"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_12sdp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add new members"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/andika_new_basic"
+            android:layout_marginStart="@dimen/_18sdp"/>
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="@dimen/_6sdp"
+            android:layout_height="@dimen/_6sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/dot_icon"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/member_count_shower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 member"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/andika_new_basic_bold"
+            android:paddingBottom="@dimen/_3sdp"/>
+
+        <ImageView
+            android:id="@+id/dot2"
+            android:layout_width="@dimen/_6sdp"
+            android:layout_height="@dimen/_6sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/dot_icon"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/admin_count_shower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 admin"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/andika_new_basic_bold"
+            android:paddingBottom="@dimen/_5sdp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friends_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/one_user_layout_group_add"
+        android:layout_weight="10"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+    <Button
+        android:id="@+id/create_group_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Create Group"
+        android:textColor="@color/my_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/andika_new_basic_bold"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:paddingTop="@dimen/_7sdp"/>
+
+</LinearLayout>
